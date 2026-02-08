@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CargoLine &mdash; Shipping & Freight Forwarding</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">CargoLine</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact" class="nav-cta">Start a Shipment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <p class="hero-tag">Shipping & freight forwarding</p>
+      <h1>Your cargo, handled<br>like it's ours.</h1>
+      <p class="hero-desc">
+        We move goods by sea, air, and land &mdash; with customs clearance,
+        real-time tracking, and none of the runaround.
+      </p>
+      <a href="#contact" class="btn btn-hero">Start a shipment &rarr;</a>
+    </div>
+    <div class="container hero-stats">
+      <div class="stat">
+        <span class="stat-num">12k+</span>
+        <span class="stat-label">Shipments</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label">Live support</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">98%</span>
+        <span class="stat-label">On-time delivery</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-tag">About us</p>
+          <h2>Moving freight since 2020.</h2>
+          <p>
+            Started with a single warehouse and a handful of trade routes.
+            A few years later, we handle thousands of shipments across
+            six continents &mdash; but the approach hasn't changed.
+          </p>
+          <p>
+            Every shipment gets a dedicated coordinator. Every route gets
+            optimized for cost and speed. No middlemen, no handoffs
+            to companies you've never heard of.
+          </p>
+        </div>
+        <div class="about-details">
+          <div class="detail-item">
+            <span class="detail-label">Founded</span>
+            <span class="detail-value">2020</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Headquarters</span>
+            <span class="detail-value">Rotterdam, NL</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Offices</span>
+            <span class="detail-value">Germany, Kurdistan</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Team</span>
+            <span class="detail-value">5 people</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="features">
+    <div class="container">
+      <div class="features-header">
+        <h2>What we handle</h2>
+        <p>End-to-end logistics so you can focus on your business.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">&#9875;</div>
+          <h3>Ocean freight</h3>
+          <p>FCL and LCL on major trade lanes, managed door to door.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#9992;</div>
+          <h3>Air freight</h3>
+          <p>Express and consolidated cargo with same-day pickup.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#9745;</div>
+          <h3>Customs clearance</h3>
+          <p>Classification, duties, and compliance &mdash; no delays.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#9638;</div>
+          <h3>Warehousing</h3>
+          <p>Storage, cross-docking, and inventory at key ports.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#10147;</div>
+          <h3>Land transport</h3>
+          <p>Trucking and rail for the first and last mile.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#9730;</div>
+          <h3>Cargo insurance</h3>
+          <p>All-risk coverage tailored to your shipment and route.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-text">
+          <p class="section-tag">Contact</p>
+          <h2>Request a shipment.</h2>
+          <p>Tell us where it's going and what you're shipping. We'll come back with a rate and timeline within a few hours.</p>
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <span class="detail-label">Email</span>
+              <span class="detail-value">co.sherwani@gmail.com</span>
+            </div>
+            <div class="contact-info-item">
+              <span class="detail-label">Phone</span>
+              <span class="detail-value">+964 750 035 9686</span>
+            </div>
+            <div class="contact-info-item">
+              <span class="detail-label">Hours</span>
+              <span class="detail-value">Every day, 11:00 AM &ndash; 11:00 PM</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="return false;">
+          <input type="text" placeholder="Company name" />
+          <input type="email" placeholder="Your email" />
+          <div class="form-row">
+            <input type="text" placeholder="Origin (city/port)" />
+            <input type="text" placeholder="Destination (city/port)" />
+          </div>
+          <textarea rows="3" placeholder="Cargo details (type, weight, dimensions)"></textarea>
+          <button type="submit" class="btn">Send request &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 CargoLine</span>
+      <span>Germany &middot; Kurdistan</span>
+    </div>
+  </footer>
+
+</body>
+</html>
