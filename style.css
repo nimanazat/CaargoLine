@@ -37,6 +37,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -45,12 +46,7 @@ body {
   gap: 10px;
   text-decoration: none;
   color: #111;
-}
-
-.logo-icon {
-  font-size: 24px;
-  color: #b08d6a;
-  line-height: 1;
+  flex-shrink: 0;
 }
 
 .logo-text {
@@ -68,16 +64,18 @@ body {
 .menu-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px;
+  padding: 8px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu-toggle span {
   display: block;
-  width: 22px;
+  width: 24px;
   height: 2px;
   background: #111;
   border-radius: 2px;
@@ -463,22 +461,31 @@ body {
 /* --- Responsive --- */
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .menu-toggle {
     display: flex;
   }
 
+  nav {
+    position: static;
+  }
+
   .nav-links {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 57px;
     left: 0;
     right: 0;
     background: #fafaf8;
     flex-direction: column;
     gap: 0;
-    padding: 8px 0;
+    padding: 8px 0 12px;
     border-bottom: 1px solid #e5e5e0;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    z-index: 99;
   }
 
   .nav-links.open {
@@ -487,91 +494,154 @@ body {
 
   .nav-links li {
     width: 100%;
+    list-style: none;
   }
 
   .nav-links a {
     display: block;
-    padding: 14px 24px;
+    padding: 14px 6%;
     font-size: 15px;
+    color: #333;
   }
 
-  .nav-links a:hover {
+  .nav-links a:active {
     background: #f0efec;
   }
 
   .nav-cta {
-    margin: 8px 24px 12px;
+    display: block !important;
+    margin: 8px 6% 4px !important;
     text-align: center;
     border-radius: 6px;
-    padding: 12px 22px !important;
+    padding: 13px 22px !important;
+    font-size: 14px !important;
   }
 
+  /* Hero */
   .hero {
-    padding: 56px 0 48px;
+    padding: 48px 0 40px;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 30px;
     letter-spacing: -0.8px;
   }
 
+  .hero h1 br {
+    display: none;
+  }
+
   .hero-content {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 
   .hero-desc {
     font-size: 15px;
+    margin-bottom: 28px;
   }
 
   .hero-stats {
     flex-direction: row;
     gap: 0;
     justify-content: space-between;
+    padding-top: 28px;
   }
 
   .stat-num {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .stat-label {
     font-size: 11px;
   }
 
+  /* About */
   .about {
-    padding: 56px 0;
+    padding: 48px 0;
+  }
+
+  .about-text h2 {
+    font-size: 26px;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
 
+  .detail-item {
+    padding: 14px 0;
+  }
+
+  /* Services */
   .features {
-    padding: 56px 0;
+    padding: 48px 0;
+  }
+
+  .features-header h2 {
+    font-size: 26px;
   }
 
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 12px;
   }
 
   .service-card {
-    padding: 24px 22px;
+    padding: 22px 18px;
   }
 
+  .service-icon {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .service-card h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+
+  /* Contact */
   .contact {
-    padding: 56px 0;
+    padding: 48px 0;
+  }
+
+  .contact-text h2 {
+    font-size: 26px;
   }
 
   .contact-layout {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
+  }
+
+  .contact-info-item {
+    padding: 12px 0;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
   }
 
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+    padding: 13px 16px;
+  }
+
+  .contact-form .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 28px;
+  }
+
+  /* Footer */
   .footer-inner {
     flex-direction: column;
     gap: 8px;
@@ -585,11 +655,14 @@ body {
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
-  .hero-stats {
-    flex-direction: column;
-    gap: 18px;
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-num {
+    font-size: 20px;
   }
 }
